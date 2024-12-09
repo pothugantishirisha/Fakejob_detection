@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+
+    <title>Fake Job Prediction Using ML</title>
+<!--
+
+TemplateMo 548 Training Studio
+
+https://templatemo.com/tm-548-training-studio
+
+-->
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="../static/assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="../static/assets/css/font-awesome.css">
+
+    <link rel="stylesheet" href="../static/assets/css/templatemo-training-studio.css">
+
+    <link rel="stylesheet" href="../static/assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+<style>
+     
+</style>
+    </head>
+    
+    <body>
+    
+    <!-- ***** Preloader Start ***** -->
+    <div id="js-preloader" class="js-preloader">
+      <div class="preloader-inner">
+        <span class="dot"></span>
+        <div class="dots">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+    
+    
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="/index.html" class="logo">Fake Job Prediction Using ML <em> </em></a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="/userhome.html" class="active">Home</a></li>
+                            <li class="scroll-to-section"><a href="/upload.html">Upload</a></li>                           
+                            <li class="scroll-to-section"><a href="/index.html">Logout</a></li> 
+                        </ul>         
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <!-- ***** Main Banner Area Start ***** -->
+    <div class="main-banner" id="top">
+             
+                    <form action="{{ url_for('result') }}" method="post">
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4">
+                                    <label for="jobid">jobid</label>
+                                </div>
+                                <div class="col-lg-8 col-md-8">                                
+                                    <input type="text" Style="width:50%" class="form-control" id="jobid" name="jobid" placeholder="jobid">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4">
+                                    <label for="age">title</label>
+                                </div>
+                                <div class="col-lg-8 col-md-8">
+                                    <input type="text" Style="width:50%" class="form-control" id="title" name="title" placeholder="title">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4">
+                                    <label for="age">location</label>
+                                </div>
+                                <div class="col-lg-8 col-md-8">
+                                    <input type="text" Style="width:50%" class="form-control" id="location" name="location" placeholder="location">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4">
+                                    <label for="age">department</label>
+                                </div>
+                                <div class="col-lg-8 col-md-8">
+                                    <input type="text" Style="width:50%" class="form-control" id="department" name="department" placeholder="department">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4">
+                                    <label for="age">salaryrange</label>
+                                </div>
+                                <div class="col-lg-8 col-md-8">
+                                    <input type="text" Style="width:50%" class="form-control" id="salaryrange" name="salaryrange" placeholder="salaryrange">
+                                </div>
+                            </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4">
+                                    <label for="age">companyprofile	</label>
+                                </div>
+                                <div class="col-lg-8 col-md-8">
+                                    <input type="text" Style="width:50%" class="form-control" id="companyprofile" name="companyprofile" placeholder="companyprofile">
+                                </div>
+                            </div>
+                            <br>
+                             
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4">
+                                    <label for="age">description</label>
+                                </div>
+                                <div class="col-lg-8 col-md-8">
+                                    <input type="text" Style="width:50%" class="form-control" id="description" name="description" placeholder="description">
+                                </div>
+                            </div>
+                            <br>
+                             
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4">
+                                    <label for="age">requirements</label>
+                                </div>
+                                <div class="col-lg-8 col-md-8">
+                                    <input type="text" Style="width:50%" class="form-control" id="requirements" name="requirements" placeholder="requirements">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4">
+                                    <label for="age">benefits</label>
+                                </div>
+                                <div class="col-lg-8 col-md-8">
+                                    <input type="text" Style="width:50%" class="form-control" id="benefits" name="benefits" placeholder="benefits">
+                                </div>
+                            </div>
+                            <br>
+                             
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4">
+                                    <label for="age">telecommuting</label>
+                                </div>
+                                <div class="col-lg-8 col-md-8">
+                                    <input type="text" Style="width:50%" class="form-control" id="telecommuting" name="telecommuting" placeholder="telecommuting">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4">
+                                    <label for="age">hascompanylogo</label>
+                                </div>
+                                <div class="col-lg-8 col-md-8">
+                                    <input type="text" Style="width:50%" class="form-control" id="hascompanylogo" name="hascompanylogo" placeholder="hascompanylogo">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4">
+                                    <label for="age">hasquestions</label>
+                                </div>
+                                <div class="col-lg-8 col-md-8">
+                                    <input type="text" Style="width:50%" class="form-control" id="hasquestions" name="hasquestions" placeholder="hasquestions">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4">
+                                    <label for="age">employmenttype</label>
+                                </div>
+                                <div class="col-lg-8 col-md-8">
+                                    <input type="text" Style="width:50%" class="form-control" id="employmenttype" name="employmenttype" placeholder="employmenttype">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4">
+                                    <label for="age">requiredexperience</label>
+                                </div>
+                                <div class="col-lg-8 col-md-8">
+                                    <input type="text" Style="width:50%" class="form-control" id="requiredexperience" name="requiredexperience" placeholder="requiredexperience">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4">
+                                    <label for="age">requirededucation</label>
+                                </div>
+                                <div class="col-lg-8 col-md-8">
+                                    <input type="text" Style="width:50%" class="form-control" id="requirededucation" name="requirededucation" placeholder="requirededucation">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4">
+                                    <label for="age">industry</label>
+                                </div>
+                                <div class="col-lg-8 col-md-8">
+                                    <input type="text" Style="width:50%" class="form-control" id="industry" name="industry" placeholder="industry">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4">
+                                    <label for="age">function</label>
+                                </div>
+                                <div class="col-lg-8 col-md-8">
+                                    <input type="text" Style="width:50%" class="form-control" id="function" name="function" placeholder="function">
+                                </div>
+                            </div>
+                            <br>
+                        </div>
+                        <br>    
+                            <center>
+                                <button type="submit" class="btn btn-dark" value="submit">Submit</button>
+                            </center>
+                    </form>
+                                
+                    </div>
+               
+            </div>
+        </div>
+   
+    <!-- ***** Main Banner Area End ***** -->
+
+    <!-- ***** Features Item Start ***** -->
+   
+    <!-- ***** Features Item End ***** -->
+
+    <!-- ***** Call to Action Start ***** -->
+  
+    <!-- ***** Call to Action End ***** -->
+
+    <!-- ***** Our Classes Start ***** -->
+  
+    <!-- jQuery -->
+    <script src="../static/assets/js/jquery-2.1.0.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="../static/assets/js/popper.js"></script>
+    <script src="../static/assets/js/bootstrap.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="../static/assets/js/scrollreveal.min.js"></script>
+    <script src="../static/assets/js/waypoints.min.js"></script>
+    <script src="../static/assets/js/jquery.counterup.min.js"></script>
+    <script src="../static/assets/js/imgfix.min.js"></script> 
+    <script src="../static/assets/js/mixitup.js"></script> 
+    <script src="../static/assets/js/accordions.js"></script>
+    
+    <!-- Global Init -->
+    <script src="../static/assets/js/custom.js"></script>
+
+  </body>
+</html>
